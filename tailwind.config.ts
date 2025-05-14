@@ -63,9 +63,22 @@ const config = {
         serif: ["var(--font-serif-sc)", "var(--font-serif)", "serif"],
         "serif-latin": ["var(--font-serif)", "serif"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "white",
+            a: {
+              color: "#a3e635",
+              "&:hover": {
+                color: "#bef264",
+              },
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 } satisfies Config
 
 export default config

@@ -22,7 +22,7 @@ const notoSerifSC = Noto_Serif_SC({
 
 export const metadata: Metadata = {
   title: "镜面之地 | Inverse City",
-  description: "Welcome to Inverse City - 镜面之地"
+  description: "Welcome to Inverse City - 镜面之地",
 }
 
 export default function RootLayout({

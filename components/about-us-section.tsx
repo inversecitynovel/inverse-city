@@ -1,6 +1,8 @@
 "use client"
 
+import Link from "next/link"
 import { useLanguage } from "./language-provider"
+import { ArrowRight } from "lucide-react"
 
 export function AboutUsSection() {
   const { t } = useLanguage()
@@ -22,6 +24,14 @@ export function AboutUsSection() {
             className="text-lg md:text-xl leading-relaxed font-serif"
             dangerouslySetInnerHTML={{ __html: t("aboutUsContactContent") }}
           />
+          <div className="pt-4">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-lg text-white/80 hover:text-white transition-colors"
+            >
+              {t("aboutUsMoreInfo")} <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </div>
 
