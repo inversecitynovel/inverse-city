@@ -32,6 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className={`${notoSerif.variable} ${notoSerifSC.variable}`}>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5JDZZ3CQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H5JDZZ3CQ4');
+</script>
       <body className="bg-black text-white font-serif min-h-screen">
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>
