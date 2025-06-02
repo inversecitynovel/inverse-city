@@ -4,6 +4,7 @@ import { Noto_Serif_SC, Noto_Serif } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/components/language-provider"
 import "./globals.css"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 // Serif fonts for English and Chinese
 const notoSerif = Noto_Serif({
@@ -32,15 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className={`${notoSerif.variable} ${notoSerifSC.variable}`}>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5JDZZ3CQ4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H5JDZZ3CQ4');
-</script>
+      <GoogleAnalytics gaId="G-H5JDZZ3CQ4" />
       <body className="bg-black text-white font-serif min-h-screen">
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>
